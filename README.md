@@ -12,6 +12,24 @@
   - TestMapArea_KozHashTest
     - _test map level_
 
+## Functions in _KozHash_Func
+- **KozHash StringToHash**
+  - _this is the main hash function, give string, get int32 hash_
+- KozHash ShortPad
+  - _used for strings w/ len < 7_
+  - _pads right until string is len 7_
+  - _pads using char derived from avg of all str ascii codes_
+- KozHash FindPrimeLen
+  - _used internally to find the next prime string length, if not already prime_
+  - _forces min len of 7_
+- KozHash TruePow
+  - _gives true binary value for 2^0 -> 2^31_
+  - _Exp parm clamped to 0-31_
+- KozHash BitShift
+  - _performs 'bit shift' on int value for specified count # positions_
+  - _positive count shifts left_ `<<` _bits fall off left, zeros fill on right_
+  - _negative count shifts right_ `>>` _bits fall off right, zeros fill on left_
+
 ## Hash Logic / Algorithm
 1. Is short string? (<7 length)
   - _String is right padded until length==7_
