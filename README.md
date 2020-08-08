@@ -25,7 +25,7 @@
   - _ki is the current char ascii in string/loop_ 
   - _ascii codes > 255 are split into their two byte values and then the below is run on each, low byte first_
 ```
-h = 0; // init
+h = 0;                          // init
 ... start char loop ...
 highorder = h & 0xf8000000;     // set 5 high bits aside
 h = h << 5;                     // bit shift left, removing 5 high bits 
