@@ -64,9 +64,11 @@ h = h ^ ki;                     // XOR h with current char ascii ki
 
 ## Collision Testing 
 I have run the tests provided in this repo many times, resulting in 10s of thousands of hash collision tests overall. The core CRC Variant algorithm has not changed since I began the testing, however, the padding strategies I have implemented are there as mitigating factors for collisions I found to occur on short strings. 
+
 If you find any collisions please do reach out to me and let me know what the strings and colliding hash value were.  Thanks! 
-Discord: Koz#4354 / https://discord.gg/FmWBgQV 
-Steam: Kozenomenon / https://steamcommunity.com/profiles/76561197962912863/
+
+- Discord: Koz#4354 / https://discord.gg/FmWBgQV 
+- Steam: Kozenomenon / https://steamcommunity.com/profiles/76561197962912863/
 
 
 ## Reference
