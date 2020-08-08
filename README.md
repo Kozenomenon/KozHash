@@ -20,7 +20,7 @@
   - _pads right until string is len 7_
   - _pads using char derived from avg of all str ascii codes_
 - KozHash FindPrimeLen
-  - _used internally to find the next prime string length, if not already prime_
+  - _finds the next prime string length, if not already prime_
   - _forces min len of 7_
 - KozHash TruePow
   - _gives true binary value for 2^0 -> 2^31_
