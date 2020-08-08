@@ -27,12 +27,12 @@
 ```
 h = 0; // init
 ... start char loop ...
-highorder = h & 0xf8000000;  	// set 5 high bits aside
-h = h << 5;						// bit shift left, removing 5 high bits 
-h = h ^ (highorder >>> 27); 	// shift those 5 high bits we set aside to 
-								// right 27 which makes them the low bits 
-								// then XOR that with h 
-h = h ^ ki; 					// XOR h with current char ascii ki 
+highorder = h & 0xf8000000;     // set 5 high bits aside
+h = h << 5;                     // bit shift left, removing 5 high bits 
+h = h ^ (highorder >>> 27);     // shift those 5 high bits we set aside to 
+                                // right 27 which makes them the low bits 
+                                // then XOR that with h 
+h = h ^ ki;                     // XOR h with current char ascii ki 
 ... end char loop ...
 ```
 4. Were any unicode chars encountered? (ascii > 255) 
