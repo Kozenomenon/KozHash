@@ -11,6 +11,10 @@
     - _test PGD_
   - TestMapArea_KozHashTest
     - _test map level_
+- TestLog_30CharMax_500TestPerAlpha.txt
+  - _PIE log from tests w/ 30 char max len random strings & 500 hash tests per alphabet_
+- TestLog_500CharMax_50TestPerAlpha.txt
+  - _PIE log from tests w/ 500 char max len random strings & 50 hash tests per alphabet_
 
 ## Functions in _KozHash_Func
 - **KozHash StringToHash**
