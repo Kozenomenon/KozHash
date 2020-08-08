@@ -19,7 +19,7 @@
 2. Is string length NOT prime? 
   - _Next prime value found (ex. len 8 -> 11)_
   - _String is padded until matches prime length_
-  - _Pad char is static ascii code 213 / 0xD5 / 1101 0101 chosen for its bit pattern_ 
+  - _Pad char is static ascii code chosen for its bit pattern_ `213 / 0xD5 / 1101 0101`  
 3. Bit operations done per character in string
   - _h is the output value, the hash, initialized to 0 at start_
   - _ki is the current char ascii in string/loop_ 
@@ -39,5 +39,5 @@ h = h ^ ki;                     // XOR h with current char ascii ki
   - _Count of unicode encountered is added to string length and prime checked same as initially_
   - _new prime length diffed against old, this is how many pad chars we will add to calculation_
   - _this is done to ensure the 'set' operated on is always prime length and unicode added items to set_ 
-  - _pad char ascii used for this is 21 / 0x15 / 0001 0101_
+  - _pad char ascii used for this is_ `21 / 0x15 / 0001 0101` 
 5. Final 'h' from above is hash returned
