@@ -43,6 +43,7 @@
   - _ki is the current char ascii in string/loop_ 
   - _ascii codes > 255 are split into their two byte values and then the below is run on each, low byte first_
 ```
+//  CRC Variant Hash Algorithm  // (yes it is simple) 
 h = 0;                          // init
 ... start char loop ...
 highorder = h & 0xf8000000;     // set 5 high bits aside
@@ -59,3 +60,17 @@ h = h ^ ki;                     // XOR h with current char ascii ki
   - _this is done to ensure the 'set' operated on is always prime length and unicode added items to set_ 
   - _pad char ascii used for this is_ `21 / 0x15 / 0001 0101` 
 5. Final 'h' from above is hash returned
+
+
+## Collision Testing 
+I have run the tests provided in this repo many times, resulting in 10s of thousands of hash collision tests overall. The core CRC Variant algorithm has not changed since I began the testing, however, the padding strategies I have implemented are there as mitigating factors for collisions I found to occur on short strings. 
+If you find any collisions please do reach out to me and let me know what the strings and colliding hash value were.  Thanks! 
+Discord: Koz#4354 / https://discord.gg/FmWBgQV 
+Steam: Kozenomenon / https://steamcommunity.com/profiles/76561197962912863/
+
+
+## Reference
+I got the CRC Variant hash algorithm from this site. Yes, it is old and simple, but simple was also kind of the idea... :D 
+https://www.cs.hmc.edu/~geoff/classes/hmc.cs070.200101/homework10/hashfuncs.html 
+
+
